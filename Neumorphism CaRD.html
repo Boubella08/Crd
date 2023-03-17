@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+
+    <style>
+        /*
+
+Neumorphic Checkbox Dark&Light Mode
+https://codepen.io/DivineBlow/pen/KKgBPxY
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+/* Light Mode styles */
+
+* {
+	font-family: "Righteous", cursive;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff9ed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100vw;
+	flex-wrap: wrap;
+	padding: 40px 0;
+}
+	.card {
+		position: relative;
+		width: 320px;
+		height: 440px;
+		box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+			inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05),
+			-5px -5px 5px rgba(255, 255, 255, 0.5);
+		border-radius: 15px;
+		margin: 30px;
+    }
+		.box {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			bottom: 20px;
+			left: 20px;
+			background: #fff9ed;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.5s;}
+
+			.content {
+				padding: 20px;
+				text-align: center;}
+
+				.fab {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					font-size: clamp(55px, 10vw, 65px);
+					pointer-events: none;
+				}
+
+				.fa-python {
+					background: rgb(0, 115, 163);
+					background: linear-gradient(
+						90deg,
+						rgba(0, 115, 163, 1) 0%,
+						rgba(255, 210, 41, 1) 100%
+					);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					
+				}
+
+				.fa-java {
+					background: rgb(255, 0, 0);
+					background: linear-gradient(
+						90deg,
+						rgba(255, 0, 0, 1) 0%,
+						rgba(125, 108, 130, 1) 70%,
+						rgba(0, 212, 255, 1) 100%
+					);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					
+				}
+
+				.fa-js-square {
+					background-color: #fbda61;
+					background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+				
+				}
+
+				h3 {
+					font-size: 1.8em;
+					color: #777;
+					z-index: 1;
+					transition: 0.5s;
+				}
+
+				p {
+					font-size: 1em;
+					color: #777;
+					z-index: 1;
+					transition: 0.5s;
+				}
+
+				a {
+					position: relative;
+					display: inline-block;
+					padding: 8px 20px;
+					background: #409eff;
+					margin-top: 15px;
+					border-radius: 20px;
+					color: #fff;
+					text-decoration: none;
+					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+				}
+			
+		
+	
+
+	.card:hover .box .content a {
+		background: #ff4049;
+	}
+
+.container .card:hover .box {
+	transform: translateY(-50px);
+	box-shadow: 0 10px 40px rgba(112, 41, 41, 0.4);
+	background: linear-gradient(45deg,  #d8cbcbb0, #ff0015);
+}
+
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p {
+	color: #fff;
+}
+
+/* Dark Mode styles */
+
+
+    </style>
+</head>
+<body>
+    
+
+    <!--Glowing Checkbox Button Toggle-->
+
+
+<!--Neumorphism Cards with Hover Effects Light&Dark-->
+<div class="container">
+	<div class="card">
+		<div class="box">
+			<div class="content">
+				<i class="fab fa-python"></i>
+				<h3>Python</h3>
+				<p>Python is an interpreted high-level
+                     general-purpose programming language.
+                     Its design philosophy emphasizes code readability with its use of significant indentation.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="box">
+			<div class="content">
+				<i class="fab fa-java"></i>
+				<h3>Java</h3>
+				<p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="box">
+			<div class="content">
+				<i class="fab fa-js-square"></i>
+				<h3>JavaScript</h3>
+				<p>JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, prototype-based object-orientation, and first-class functions.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
